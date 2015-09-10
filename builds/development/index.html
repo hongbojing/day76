@@ -7,11 +7,14 @@
 </head>
 <body ng-app="myApp">
 <div ng-controller="myController as myCtrl">
-    <span ng-repeat="data in myCtrl.data track by $index" class="test col-xs-2">
-        <p ng-repeat="day in data.day track by $index">
-            {{day}}
-        </p>
-    </span>
+    <table class="table">
+        <tr ng-repeat="data in myCtrl.data track by $index">
+            <td ng-repeat="day in data.day track by $index">
+                {{day}}
+            </td>
+        </tr>
+    </table>
+
 </div>
 
 <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
