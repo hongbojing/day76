@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <title>day #</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        .col-xs-2{
+            background: #d1d1d1;
+            border: 1px solid red;
+        }
+        p{
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body ng-app="myApp">
 <div ng-controller="myController as myCtrl">
-    <table class="table">
-        <tr ng-repeat="data in myCtrl.data track by $index">
-            <td ng-repeat="day in data.day track by $index">
-                {{day}}
-            </td>
-        </tr>
-    </table>
-
+        <span ng-repeat="data in myCtrl.data track by $index" class="col-xs-2">
+            <p ng-repeat="day in data.day track by $index">
+                <a href="#">
+                    {{day}}
+                </a>
+            </p>
+        </span>
 </div>
 
 <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
