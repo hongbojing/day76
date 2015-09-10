@@ -1,13 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>day #</title>
-  <link rel="stylesheet" href="css/myStyle.css">
-  <link rel="stylesheet" href="css/anotherstyle.css">
+    <meta charset="UTF-8">
+    <title>day #</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
-<body>
+<body ng-app="myApp">
+<div ng-controller="myController as myCtrl">
+    <span ng-repeat="data in myCtrl.data track by $index" class="test col-xs-2">
+        <p ng-repeat="day in data.day track by $index">
+            {{day}}
+        </p>
+    </span>
+</div>
 
 <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+<script src="js/lib/angular/angular.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
